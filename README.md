@@ -49,8 +49,11 @@ Introducing **PixelArch OS** by Midori AI, an innovative Arch Linux-based operat
 - Available for Amethyst, Topaz, and Emerald tiers
 - Includes NVIDIA open drivers and CUDA toolkit
 - Optimized for: AI/ML workloads, GPU computing, deep learning
+- **Note**: CUDA variants require local building and are large (2+ GB)
 
 ### Getting Started:
+
+**Docker Hub**: Pre-built images are available at [lunamidori5/pixelarch](https://hub.docker.com/repository/docker/lunamidori5/pixelarch/general)
 
 For detailed setup instructions and usage examples, see the [PixelArch OS README](pixelarch_os/README.md). 
 
@@ -90,7 +93,11 @@ PixelGen OS includes a customized `make.conf` that can be tailored to your hardw
 
 ### Getting Started:
 
+**Docker Hub**: Pre-built images are available at [lunamidori5/pixelgen](https://hub.docker.com/repository/docker/lunamidori5/pixelgen/general)
+
 PixelGen OS is designed for users familiar with Gentoo Linux and source-based package management. While it includes pacaptr for compatibility with pacman/yay commands, understanding Gentoo's Portage system will help you leverage its full potential.
+
+**Build Recommendation**: While a workflow builds images for users, building locally is recommended for optimal customization.
 
 **Note**: Due to source-based compilation, PixelGen OS may have longer build times compared to binary-based distributions, but offers superior customization and optimization capabilities. 
 
