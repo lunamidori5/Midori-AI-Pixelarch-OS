@@ -1,4 +1,4 @@
-# Midori Ai Cluster OS
+# Midori Ai Pixel OS
 
 ## PixelArch OS
 
@@ -10,15 +10,17 @@ Key Features:
 - **Frequent Updates**: Ensures that its systems are always current, reducing the risk of security vulnerabilities and improving performance.
 - **Package Manager**:  Utilizes the powerful `yay` package manager, alongside the traditional `pacman`, for a streamlined and efficient package management experience. 
 
-## Midori AI's Cluster OS
+## PixelGen OS
 
-Our Cluster OS harnesses the collective power of multiple machines to accelerate AI training and building. This enables us to tackle complex tasks, train larger models, and achieve unprecedented results. This distributed architecture unlocks unparalleled performance for:
+# TODO: Update this for PixelGen not PixelArch
 
-- **Scalable AI Training:** Train larger, more complex models, enabling breakthroughs in model accuracy and capabilities.
-- **Scalable Infrastructure:**  Seamlessly scale AI resources up or down as needed, ensuring optimal performance and cost-efficiency.
-- **Runs in Docker**: Cluster OS leverages the power of Docker and our custom PixelArch OS to deliver a streamlined and efficient containerized experience.  PixelArch, built upon Arch Linux, is specifically engineered to run in Docker for easy setup and testing.
+Introducing **PixelGen OS** by Midori AI, an innovative Gentoo-based operating system designed specifically for managing Docker images with ease. PixelArch OS ensures that your Docker environments are always up to date, providing a streamlined and efficient platform for developers and system administrators.
 
-**Currently Available:** Right now it is able to generate photos for our weather api but we are entering wave 2 testing soon!
+Key Features:
+- **Arch-Based**: Leverages the lightweight and flexible nature of Arch Linux, allowing for a highly customizable and efficient OS tailored to your needs.
+- **Runs in Docker**: Optimized for Docker, making it easier to build, deploy, and manage containerized ai applications.
+- **Frequent Updates**: Ensures that its systems are always current, reducing the risk of security vulnerabilities and improving performance.
+- **Package Manager**:  Utilizes the powerful `yay` package manager, alongside the traditional `pacman`, for a streamlined and efficient package management experience. 
 
 
 ## Get Involved:
