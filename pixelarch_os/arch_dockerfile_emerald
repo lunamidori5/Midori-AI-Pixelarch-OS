@@ -2,11 +2,22 @@ FROM lunamidori5/pixelarch:topaz
 
 RUN sudo sed -i 's/Topaz/Emerald/g' /etc/os-release
 
+# SSH
 RUN yay -Syu --noconfirm openssh && yay -Yccc --noconfirm
-RUN yay -Syu --noconfirm github-cli && yay -Yccc --noconfirm
-RUN yay -Syu --noconfirm claude-code && yay -Yccc --noconfirm
-RUN yay -Syu --noconfirm github-copilot-cli && yay -Yccc --noconfirm
-RUN yay -Syu --noconfirm openai-codex-bin && yay -Yccc --noconfirm
 RUN yay -Syu --noconfirm tmate && yay -Yccc --noconfirm
+
+# Coding Agent
+RUN yay -Syu --noconfirm claude-code && yay -Yccc --noconfirm
+RUN yay -Syu --noconfirm openai-codex-bin && yay -Yccc --noconfirm
+RUN yay -Syu --noconfirm github-copilot-cli && yay -Yccc --noconfirm
+
+# CLI TOOL
+RUN yay -Syu --noconfirm github-cli && yay -Yccc --noconfirm
+
+# TOR
+RUN yay -Syu --noconfirm tor && yay -Yccc --noconfirm
+RUN yay -Syu --noconfirm torsocks && yay -Yccc --noconfirm
 RUN yay -Syu --noconfirm torbrowser-launcher && yay -Yccc --noconfirm
+
+# OTHER
 RUN yay -Syu --noconfirm lynx && yay -Yccc --noconfirm
