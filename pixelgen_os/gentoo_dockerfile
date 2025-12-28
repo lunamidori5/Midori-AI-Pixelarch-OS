@@ -38,5 +38,11 @@ RUN chmod 755 ~/.cargo/bin/pacaptr
 RUN sudo ln -sv ~/.cargo/bin/pacaptr /usr/local/bin/yay || true
 RUN sudo ln -sv ~/.cargo/bin/pacaptr /usr/local/bin/pacman || true
 
-RUN yay -S --noconfirm go gentoolkit wget tmate fastfetch fish && yay -Scc --noconfirm
+RUN yay -S --noconfirm go && yay -Scc --noconfirm
+RUN yay -S --noconfirm gentoolkit&& yay -Scc --noconfirm
+RUN yay -S --noconfirm wget && yay -Scc --noconfirm
+RUN yay -S --noconfirm tmux && yay -Scc --noconfirm
+RUN yay -S --noconfirm tmate && yay -Scc --noconfirm
+RUN yay -S --noconfirm fish && yay -Scc --noconfirm
+RUN yay -S --noconfirm fastfetch && yay -Scc --noconfirm
 
