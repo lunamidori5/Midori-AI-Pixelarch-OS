@@ -3,6 +3,10 @@ FROM lunamidori5/pixelarch:topaz
 RUN sudo sed -i 's/Topaz/Emerald/g' /etc/os-release
 
 RUN yay -Syu --noconfirm openssh && yay -Yccc --noconfirm
+RUN yay -Syu --noconfirm github-cli && yay -Yccc --noconfirm
+RUN yay -Syu --noconfirm claude-code && yay -Yccc --noconfirm
+RUN yay -Syu --noconfirm github-copilot-cli && yay -Yccc --noconfirm
+RUN yay -Syu --noconfirm openai-codex-bin && yay -Yccc --noconfirm
 RUN yay -Syu --noconfirm tmate && yay -Yccc --noconfirm
 RUN yay -Syu --noconfirm torbrowser-launcher && yay -Yccc --noconfirm
 RUN yay -Syu --noconfirm lynx && yay -Yccc --noconfirm
