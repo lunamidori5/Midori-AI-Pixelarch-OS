@@ -1,8 +1,4 @@
-FROM lunamidori5/pixelarch:amethyst_cuda
+FROM lunamidori5/pixelarch:topaz
 
-RUN sudo sed -i 's/Amethyst/Topaz/g' /etc/os-release
-
-RUN yay -Syu --noconfirm python python-pip python-pyfiglet python-virtualenv uv && yay -Yccc --noconfirm
-RUN yay -Syu --noconfirm nodejs nvm && yay -Yccc --noconfirm
-RUN yay -Syu --noconfirm rust gcc && yay -Yccc --noconfirm
-RUN yay -Syu --noconfirm wine xorg-server-xvfb && yay -Yccc --noconfirm
+RUN yay -Syu --noconfirm nvidia-open && yay -Yccc --noconfirm
+RUN yay -Syu --noconfirm cuda && yay -Yccc --noconfirm

@@ -2,18 +2,37 @@ FROM lunamidori5/pixelarch:quartz
 
 RUN sudo sed -i 's/Quartz/Amethyst/g' /etc/os-release
 
+# Core utilities
 RUN yay -Syu --noconfirm curl && yay -Yccc --noconfirm
 RUN yay -Syu --noconfirm wget && yay -Yccc --noconfirm
 RUN yay -Syu --noconfirm tar && yay -Yccc --noconfirm
 RUN yay -Syu --noconfirm zip && yay -Yccc --noconfirm
 RUN yay -Syu --noconfirm unzip && yay -Yccc --noconfirm
+
+# Files & formatting
 RUN yay -Syu --noconfirm tree && yay -Yccc --noconfirm
 RUN yay -Syu --noconfirm xz && yay -Yccc --noconfirm
 RUN yay -Syu --noconfirm jq && yay -Yccc --noconfirm
+RUN yay -Syu --noconfirm ripgrep && yay -Yccc --noconfirm
+
+# Visual / editor
 RUN yay -Syu --noconfirm lolcat && yay -Yccc --noconfirm
 RUN yay -Syu --noconfirm neovim && yay -Yccc --noconfirm
 RUN yay -Syu --noconfirm nano && yay -Yccc --noconfirm
+
+# Developer shells
+RUN yay -Syu --noconfirm zsh && yay -Yccc --noconfirm
+RUN yay -Syu --noconfirm tmux && yay -Yccc --noconfirm
+RUN yay -Syu --noconfirm fish && yay -Yccc --noconfirm
+
+# Shell enhancements
 RUN yay -Syu --noconfirm bash-completion && yay -Yccc --noconfirm
+RUN yay -Syu --noconfirm zsh-completions && yay -Yccc --noconfirm
+RUN yay -Syu --noconfirm starship && yay -Yccc --noconfirm
+
+# System info
 RUN yay -Syu --noconfirm fastfetch && yay -Yccc --noconfirm
+
+# Docker tooling
 RUN yay -Syu --noconfirm docker && yay -Yccc --noconfirm
 RUN yay -Syu --noconfirm docker-compose && yay -Yccc --noconfirm

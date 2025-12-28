@@ -1,8 +1,4 @@
-FROM lunamidori5/pixelarch:topaz_cuda
+FROM lunamidori5/pixelarch:emerald
 
-RUN sudo sed -i 's/Topaz/Emerald/g' /etc/os-release
-
-RUN yay -Syu --noconfirm openssh && yay -Yccc --noconfirm
-RUN yay -Syu --noconfirm tmate && yay -Yccc --noconfirm
-RUN yay -Syu --noconfirm torbrowser-launcher && yay -Yccc --noconfirm
-RUN yay -Syu --noconfirm lynx && yay -Yccc --noconfirm
+RUN yay -Syu --noconfirm nvidia-open && yay -Yccc --noconfirm
+RUN yay -Syu --noconfirm cuda && yay -Yccc --noconfirm
