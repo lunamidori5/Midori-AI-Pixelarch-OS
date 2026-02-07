@@ -1,5 +1,7 @@
 # Midori Ai Pixel OS
 
+![pixelarch-logo](https://tea-cup.midori-ai.xyz/download/pixalarch-banner.png)
+
 ## PixelArch OS
 
 Introducing **PixelArch OS** by Midori AI, an innovative Arch Linux-based operating system designed specifically for containerized development and AI workloads. PixelArch OS provides a lightweight, flexible, and powerful platform that runs seamlessly in Docker environments, making it ideal for developers, system administrators, and AI practitioners.
@@ -56,6 +58,8 @@ Introducing **PixelArch OS** by Midori AI, an innovative Arch Linux-based operat
 **Docker Hub**: Pre-built images are available at [lunamidori5/pixelarch](https://hub.docker.com/repository/docker/lunamidori5/pixelarch/general)
 
 For detailed setup instructions and usage examples, see the [PixelArch OS README](pixelarch_os/README.md). 
+
+![pixelgen-logo](https://tea-cup.midori-ai.xyz/download/pixelgen-banner.png)
 
 ## PixelGen OS
 
