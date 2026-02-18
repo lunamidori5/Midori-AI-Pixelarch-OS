@@ -31,11 +31,15 @@ RUN groupadd --gid $USER_GID $USERNAME && useradd --uid $USER_UID --gid $USER_GI
 
 USER $USERNAME
 WORKDIR /home/$USERNAME
+ENV PATH="/home/$USERNAME/.local/bin:$PATH"
 
 RUN bash -c "$(curl -fsSL https://raw.githubusercontent.com/ohmybash/oh-my-bash/master/tools/install.sh)"
 
 COPY ohmybashuser.sh .bashrc
+RUN mkdir -p /home/$USERNAME/.local/bin
+COPY --chown=$USERNAME:$USERNAME clean-yay.sh /home/$USERNAME/.local/bin/clean-yay
+RUN chmod +x /home/$USERNAME/.local/bin/clean-yay
 
 RUN git clone --progress https://aur.archlinux.org/yay.git && cd yay && makepkg -csi --noconfirm && cd .. && sudo rm -rf yay
 
-RUN yay -Syu --noconfirm --devel --diffmenu=false --answerclean A --sudoloop --save && yay -Yccc --noconfirm
+RUN yay -Syu --noconfirm --devel --diffmenu=false --answerclean A --sudoloop --save && clean-yay

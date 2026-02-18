@@ -6,6 +6,7 @@ esac
 
 # Path to your oh-my-bash installation.
 export OSH='/home/midori-ai/.oh-my-bash'
+export PATH="$HOME/.local/bin:$PATH"
 
 # Set name of the theme to load. Optionally, if you set this to "random"
 # it'll load a random theme each time that oh-my-bash is loaded.
