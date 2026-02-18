@@ -2,11 +2,11 @@
 
 set -euo pipefail
 
-pacman -Syu --noconfirm --needed curl
 pacman -Syu --noconfirm --needed git
 pacman -Syu --noconfirm --needed sudo
 pacman -Syu --noconfirm --needed base-devel
-pacman -Syu --noconfirm --needed go
+
+pacman -Sccc --noconfirm
 
 rm -rf /var/cache/pacman/pkg/* || true
 rm -rf /var/lib/pacman/sync/* || true
