@@ -2,13 +2,9 @@
 
 set -euo pipefail
 
-#pacman -Syu --noconfirm --needed curl
 pacman -Syu --noconfirm --needed git
-pacman -Syu --noconfirm --needed sudo-rs
+pacman -Syu --noconfirm --needed sudo
 pacman -Syu --noconfirm --needed base-devel
-#pacman -Syu --noconfirm --needed go
-
-ln -sf /usr/bin/sudo-rs /usr/bin/sudo
 
 pacman -Sccc --noconfirm
 
