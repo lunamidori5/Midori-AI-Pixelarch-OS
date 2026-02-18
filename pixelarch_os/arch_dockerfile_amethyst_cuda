@@ -1,4 +1,4 @@
 FROM lunamidori5/pixelarch:amethyst
 
-RUN yay -Syu --noconfirm nvidia-open && yay -Yccc --noconfirm
-RUN yay -Syu --noconfirm cuda && yay -Yccc --noconfirm
+RUN yay -Syu --noconfirm nvidia-open && clean-yay
+RUN yay -Syu --noconfirm cuda && clean-yay

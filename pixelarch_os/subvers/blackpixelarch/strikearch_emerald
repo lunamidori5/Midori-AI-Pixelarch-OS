@@ -12,7 +12,7 @@ ARG USERNAME=midori-ai
 USER $USERNAME
 WORKDIR /home/$USERNAME
 
-RUN yay -Syu --noconfirm archstrike-keyring && yay -Yccc --noconfirm
-RUN yay -Syu --noconfirm archstrike-mirrorlist && yay -Yccc --noconfirm
-RUN yay -Syu --noconfirm zenmap && yay -Yccc --noconfirm
-RUN yay -Syu --noconfirm beefproject && yay -Yccc --noconfirm
+RUN yay -Syu --noconfirm archstrike-keyring && clean-yay
+RUN yay -Syu --noconfirm archstrike-mirrorlist && clean-yay
+RUN yay -Syu --noconfirm zenmap && clean-yay
+RUN yay -Syu --noconfirm beefproject && clean-yay

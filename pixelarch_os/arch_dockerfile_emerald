@@ -3,22 +3,22 @@ FROM lunamidori5/pixelarch:topaz
 RUN sudo sed -i 's/Topaz/Emerald/g' /etc/os-release
 
 # SSH
-RUN yay -Syu --noconfirm openssh && yay -Yccc --noconfirm
-RUN yay -Syu --noconfirm tmate && yay -Yccc --noconfirm
+RUN yay -Syu --noconfirm openssh && clean-yay
+RUN yay -Syu --noconfirm tmate && clean-yay
 
 # Coding Agent
-RUN yay -Syu --noconfirm gemini-cli && yay -Yccc --noconfirm
-RUN yay -Syu --noconfirm claude-code && yay -Yccc --noconfirm
-RUN yay -Syu --noconfirm openai-codex && yay -Yccc --noconfirm
-RUN yay -Syu --noconfirm github-copilot-cli && yay -Yccc --noconfirm
+RUN yay -Syu --noconfirm gemini-cli && clean-yay
+RUN yay -Syu --noconfirm claude-code && clean-yay
+RUN yay -Syu --noconfirm openai-codex && clean-yay
+RUN yay -Syu --noconfirm github-copilot-cli && clean-yay
 
 # CLI TOOL
-RUN yay -Syu --noconfirm github-cli && yay -Yccc --noconfirm
+RUN yay -Syu --noconfirm github-cli && clean-yay
 
 # TOR
-RUN yay -Syu --noconfirm tor && yay -Yccc --noconfirm
-RUN yay -Syu --noconfirm torsocks && yay -Yccc --noconfirm
-RUN yay -Syu --noconfirm torbrowser-launcher && yay -Yccc --noconfirm
+RUN yay -Syu --noconfirm tor && clean-yay
+RUN yay -Syu --noconfirm torsocks && clean-yay
+RUN yay -Syu --noconfirm torbrowser-launcher && clean-yay
 
 # OTHER
-RUN yay -Syu --noconfirm lynx && yay -Yccc --noconfirm
+RUN yay -Syu --noconfirm lynx && clean-yay
