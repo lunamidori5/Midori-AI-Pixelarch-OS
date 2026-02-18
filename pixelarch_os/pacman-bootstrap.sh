@@ -8,6 +8,8 @@ pacman -Syu --noconfirm --needed sudo-rs
 pacman -Syu --noconfirm --needed base-devel
 #pacman -Syu --noconfirm --needed go
 
+ln -sf /usr/bin/sudo-rs /usr/bin/sudo
+
 pacman -Sccc --noconfirm
 
 rm -rf /var/cache/pacman/pkg/* || true
