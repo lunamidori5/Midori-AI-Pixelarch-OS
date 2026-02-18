@@ -13,11 +13,8 @@ RUN echo "Include = /etc/pacman.d/mirrorlist" >> /etc/pacman.conf
 
 COPY pixalarch-logo.png /etc/pixalarch-logo.png
 
-RUN pacman -Syu --noconfirm --needed curl && pacman -Sccc --noconfirm
-RUN pacman -Syu --noconfirm --needed git && pacman -Sccc --noconfirm
-RUN pacman -Syu --noconfirm --needed sudo && pacman -Sccc --noconfirm
-RUN pacman -Syu --noconfirm --needed base-devel && pacman -Sccc --noconfirm
-RUN pacman -Syu --noconfirm --needed go && pacman -Sccc --noconfirm
+COPY pacman-bootstrap.sh ./pacman-bootstrap.sh
+RUN chmod +x ./pacman-bootstrap.sh && ./pacman-bootstrap.sh && rm -f ./pacman-bootstrap.sh
 
 RUN bash -c "$(curl -fsSL https://raw.githubusercontent.com/ohmybash/oh-my-bash/master/tools/install.sh)"
 
@@ -31,11 +28,15 @@ RUN groupadd --gid $USER_GID $USERNAME && useradd --uid $USER_UID --gid $USER_GI
 
 USER $USERNAME
 WORKDIR /home/$USERNAME
+ENV PATH="/home/$USERNAME/.local/bin:$PATH"
 
 RUN bash -c "$(curl -fsSL https://raw.githubusercontent.com/ohmybash/oh-my-bash/master/tools/install.sh)"
 
-COPY ohmybashuser.sh .bashrc
+COPY --chown=$USERNAME:$USERNAME ohmybashuser.sh .bashrc
+COPY --chown=$USERNAME:$USERNAME yay-bootstrap.sh ./yay-bootstrap.sh
+COPY --chown=$USERNAME:$USERNAME clean-yay.sh /home/$USERNAME/.local/bin/clean-yay
 
-RUN git clone --progress https://aur.archlinux.org/yay.git && cd yay && makepkg -csi --noconfirm && cd .. && sudo rm -rf yay
+RUN mkdir -p /home/$USERNAME/.local/bin
+RUN chmod +x /home/$USERNAME/.local/bin/clean-yay
 
-RUN yay -Syu --noconfirm --devel --diffmenu=false --answerclean A --sudoloop --save && yay -Yccc --noconfirm
+RUN chmod +x ./yay-bootstrap.sh && ./yay-bootstrap.sh && rm -f ./yay-bootstrap.sh
