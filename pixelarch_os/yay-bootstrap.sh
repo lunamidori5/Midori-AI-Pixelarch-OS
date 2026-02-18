@@ -3,6 +3,7 @@
 set -euo pipefail
 
 # Install yay from AUR
+sudo pacman -Sy --noconfirm
 git clone --progress https://aur.archlinux.org/yay.git
 cd yay
 makepkg -csi --noconfirm
