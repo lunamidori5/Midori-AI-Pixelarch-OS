@@ -32,10 +32,11 @@ ENV PATH="/home/$USERNAME/.local/bin:$PATH"
 
 RUN bash -c "$(curl -fsSL https://raw.githubusercontent.com/ohmybash/oh-my-bash/master/tools/install.sh)"
 
-COPY ohmybashuser.sh .bashrc
-RUN mkdir -p /home/$USERNAME/.local/bin
+COPY --chown=$USERNAME:$USERNAME ohmybashuser.sh .bashrc
+COPY --chown=$USERNAME:$USERNAME yay-bootstrap.sh ./yay-bootstrap.sh
 COPY --chown=$USERNAME:$USERNAME clean-yay.sh /home/$USERNAME/.local/bin/clean-yay
+
+RUN mkdir -p /home/$USERNAME/.local/bin
 RUN chmod +x /home/$USERNAME/.local/bin/clean-yay
 
-COPY yay-bootstrap.sh ./yay-bootstrap.sh
 RUN chmod +x ./yay-bootstrap.sh && ./yay-bootstrap.sh && rm -f ./yay-bootstrap.sh
