@@ -3,6 +3,6 @@ FROM lunamidori5/pixelarch:amethyst
 RUN sudo sed -i 's/Amethyst/Topaz/g' /etc/os-release
 
 RUN yay -Syu --noconfirm python python-pip python-pyfiglet python-virtualenv uv && clean-yay
-RUN yay -Syu --noconfirm nodejs npm nvm bun-bin && clean-yay
+RUN yay -Syu --noconfirm nodejs npm nvm bun && clean-yay
 RUN yay -Syu --noconfirm rust gcc && clean-yay
 RUN yay -Syu --noconfirm wine xorg-server-xvfb && clean-yay
