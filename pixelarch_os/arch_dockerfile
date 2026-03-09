@@ -3,7 +3,9 @@ FROM archlinux:latest
 ENV PYTHONDONTWRITEBYTECODE=1
 ENV PYTHONUNBUFFERED=1
 
+# These uv envs fix downstream bugs with the agents runner
 ENV UV_LINK_MODE=copy
+ENV UV_PYTHON_INSTALL_DIR=/tmp/uv
 
 RUN sed -i 's/Arch Linux/PixelArch Linux - Quartz/g' /etc/os-release
 RUN echo "VARIANT=Quartz" >> /etc/os-release
