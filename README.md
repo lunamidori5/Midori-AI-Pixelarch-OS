@@ -1,6 +1,6 @@
 # Midori Ai Pixel OS
 
-![pixelarch-logo](https://tea-cup.midori-ai.xyz/download/pixalarch-banner.png)
+![PixelArch OS banner](https://tea-cup.midori-ai.xyz/download/pixalarch-banner.png)
 
 ## PixelArch OS
 
@@ -59,7 +59,7 @@ Introducing **PixelArch OS** by Midori AI, an innovative Arch Linux-based operat
 
 For detailed setup instructions and usage examples, see the [PixelArch OS README](pixelarch_os/README.md). 
 
-![pixelgen-logo](https://tea-cup.midori-ai.xyz/download/pixelgen-banner.png)
+![PixelGen OS banner](https://tea-cup.midori-ai.xyz/download/pixelgen-banner.png)
 
 ## PixelGen OS
 
