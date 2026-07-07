@@ -1,0 +1,10 @@
+FROM lunamidori5/pixelarch:sapphire
+
+RUN sudo sed -i 's/Sapphire/Ruby/g' /etc/os-release
+
+RUN yay -Syu --noconfirm openssh && clean-yay
+RUN yay -Syu --noconfirm tmate && clean-yay
+RUN yay -Syu --noconfirm tor && clean-yay
+RUN yay -Syu --noconfirm torsocks && clean-yay
+RUN yay -Syu --noconfirm torbrowser-launcher && clean-yay
+RUN yay -Syu --noconfirm lynx && clean-yay

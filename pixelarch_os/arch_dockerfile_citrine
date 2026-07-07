@@ -1,0 +1,10 @@
+FROM lunamidori5/pixelarch:amethyst
+
+RUN sudo sed -i 's/Amethyst/Citrine/g' /etc/os-release
+
+RUN yay -Syu --noconfirm python && clean-yay
+RUN yay -Syu --noconfirm python-pip && clean-yay
+RUN yay -Syu --noconfirm python-pyfiglet && clean-yay
+RUN yay -Syu --noconfirm python-virtualenv && clean-yay
+RUN yay -Syu --noconfirm uv && clean-yay
+RUN yay -Syu --noconfirm gcc && clean-yay

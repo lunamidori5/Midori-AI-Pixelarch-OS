@@ -1,0 +1,7 @@
+FROM lunamidori5/pixelarch:topaz
+
+RUN sudo sed -i 's/Topaz/Sapphire/g' /etc/os-release
+
+RUN yay -Syu --noconfirm rust && clean-yay
+RUN yay -Syu --noconfirm wine && clean-yay
+RUN yay -Syu --noconfirm xorg-server-xvfb && clean-yay

@@ -1,0 +1,10 @@
+FROM lunamidori5/pixelarch:obsidian
+
+RUN sudo sed -i 's/Obsidian/Lapis/g' /etc/os-release
+
+RUN yay -Syu --noconfirm zsh && clean-yay
+RUN yay -Syu --noconfirm fish && clean-yay
+RUN yay -Syu --noconfirm tmux && clean-yay
+RUN yay -Syu --noconfirm bash-completion && clean-yay
+RUN yay -Syu --noconfirm zsh-completions && clean-yay
+RUN yay -Syu --noconfirm starship && clean-yay

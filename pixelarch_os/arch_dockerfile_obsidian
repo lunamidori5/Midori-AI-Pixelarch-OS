@@ -1,0 +1,13 @@
+FROM lunamidori5/pixelarch:quartz
+
+RUN sudo sed -i 's/Quartz/Obsidian/g' /etc/os-release
+
+RUN yay -Syu --noconfirm curl && clean-yay
+RUN yay -Syu --noconfirm wget && clean-yay
+RUN yay -Syu --noconfirm tar && clean-yay
+RUN yay -Syu --noconfirm xz && clean-yay
+RUN yay -Syu --noconfirm zip && clean-yay
+RUN yay -Syu --noconfirm unzip && clean-yay
+RUN yay -Syu --noconfirm tree && clean-yay
+RUN yay -Syu --noconfirm nano && clean-yay
+RUN yay -Syu --noconfirm lolcat && clean-yay

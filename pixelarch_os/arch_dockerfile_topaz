@@ -1,8 +1,8 @@
-FROM lunamidori5/pixelarch:amethyst
+FROM lunamidori5/pixelarch:citrine
 
-RUN sudo sed -i 's/Amethyst/Topaz/g' /etc/os-release
+RUN sudo sed -i 's/Citrine/Topaz/g' /etc/os-release
 
-RUN yay -Syu --noconfirm python python-pip python-pyfiglet python-virtualenv uv && clean-yay
-RUN yay -Syu --noconfirm nodejs npm nvm bun && clean-yay
-RUN yay -Syu --noconfirm rust gcc && clean-yay
-RUN yay -Syu --noconfirm wine xorg-server-xvfb && clean-yay
+RUN yay -Syu --noconfirm nodejs && clean-yay
+RUN yay -Syu --noconfirm npm && clean-yay
+RUN yay -Syu --noconfirm nvm && clean-yay
+RUN yay -Syu --noconfirm bun && clean-yay

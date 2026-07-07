@@ -11,44 +11,61 @@ Introducing **PixelArch OS** by Midori AI, an innovative Arch Linux-based operat
 - **Docker-Optimized**: Specifically designed to run in Docker containers, providing consistent environments across development, testing, and production
 - **Frequent Updates**: Rolling release ensures systems stay current with the latest features, security patches, and performance improvements
 - **Powerful Package Management**: Utilizes both `yay` (AUR helper) and `pacman` for access to the vast Arch User Repository and official repositories
-- **Tiered Variants**: Multiple pre-configured variants (Quartz, Amethyst, Topaz, Emerald) tailored to different use cases and requirements
-- **GPU Support**: CUDA-enabled variants available for GPU-accelerated AI and machine learning workloads
+- **Tiered Variants**: Multiple pre-configured variants across a 9-tier chain (Quartz, Obsidian, Lapis, Amethyst, Citrine, Topaz, Sapphire, Ruby, Emerald) tailored to different workflows and requirements
+- **GPU Support**: CUDA-enabled variants currently available for Amethyst, Topaz, and Emerald tiers for GPU-accelerated AI and machine learning workloads
 - **Oh My Bash**: Pre-configured with Oh My Bash for an enhanced terminal experience
 
 ### Available Variants:
 
 **Quartz** (Base):
-- Minimal base system with essential build tools (git, sudo, base-devel, go)
+- Unchanged base tier with essential build tools (git, sudo, base-devel, go)
 - Oh My Bash shell configuration
 - Midori AI updater tool
 - Package managers: yay and pacman
 - Perfect for: Minimal containerized environments, custom builds
 
-**Amethyst** (Utilities):
+**Obsidian** (Core Utilities):
 - Everything in Quartz, plus:
-- Essential utilities: curl, wget, tar, zip, unzip, xz, tree, jq
-- Text editors: neovim, nano
-- Tools: lolcat, bash-completion, fastfetch
-- Container tools: docker, docker-compose
-- Perfect for: General development, DevOps workflows
+- `curl`, `wget`, `tar`, `xz`, `zip`, `unzip`, `tree`, `nano`, `lolcat`
+- Perfect for: Everyday shell work, lightweight utility-focused containers
 
-**Topaz** (Development):
+**Lapis** (Shell Toolkit):
+- Everything in Obsidian, plus:
+- `zsh`, `fish`, `tmux`, `bash-completion`, `zsh-completions`, `starship`
+- Perfect for: Terminal-heavy workflows, shell customization, multiplexed sessions
+
+**Amethyst** (Developer Utilities):
+- Everything in Lapis, plus:
+- `neovim`, `ripgrep`, `jq`, `fastfetch`, `docker`, `docker-compose`
+- Perfect for: CLI-driven development, container workflows, fast inspection and editing
+
+**Citrine** (Python Build Tools):
 - Everything in Amethyst, plus:
-- Python ecosystem: python, pip, pyfiglet, virtualenv, uv
-- Node.js ecosystem: nodejs, nvm
-- Rust and C/C++: rust, gcc
-- Windows compatibility: wine, xorg-server-xvfb
-- Perfect for: Multi-language development, cross-platform builds
+- `python`, `python-pip`, `python-pyfiglet`, `python-virtualenv`, `uv`, `gcc`
+- Perfect for: Python projects, compiled extensions, virtual environment workflows
 
-**Emerald** (Full-Featured):
+**Topaz** (JavaScript Tooling):
+- Everything in Citrine, plus:
+- `nodejs`, `npm`, `nvm`, `bun`
+- Perfect for: Node.js development, package scripting, modern JavaScript runtimes
+
+**Sapphire** (Systems & Compatibility):
 - Everything in Topaz, plus:
-- Remote access: openssh, tmate
-- Privacy tools: torbrowser-launcher
-- Text-based browser: lynx
-- Perfect for: Remote development, security-focused workflows, complete development environments
+- `rust`, `wine`, `xorg-server-xvfb`
+- Perfect for: Rust development, Windows compatibility testing, headless display workflows
+
+**Ruby** (Remote & Privacy):
+- Everything in Sapphire, plus:
+- `openssh`, `tmate`, `tor`, `torsocks`, `torbrowser-launcher`, `lynx`
+- Perfect for: Remote access, privacy-focused sessions, text-first browsing
+
+**Emerald** (LLM Agent Tier):
+- Everything in Ruby, plus:
+- `gemini-cli`, `claude-code`, `openai-codex`, `github-copilot-cli`, `github-cli`
+- Perfect for: LLM agents, CLI-based coding assistants, orchestrated agent workflows
 
 **CUDA Variants** (GPU-Accelerated):
-- Available for Amethyst, Topaz, and Emerald tiers
+- Currently available for Amethyst, Topaz, and Emerald tiers only
 - Includes NVIDIA open drivers and CUDA toolkit
 - Optimized for: AI/ML workloads, GPU computing, deep learning
 - **Note**: CUDA variants require local building and are large (2+ GB)
