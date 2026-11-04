@@ -41,7 +41,7 @@ Introducing **PixelArch OS** by Midori AI, an innovative Arch Linux-based operat
 
 **Citrine** (Python Build Tools):
 - Everything in Amethyst, plus:
-- `python`, `python-pip`, `python-pyfiglet`, `python-virtualenv`, `uv`, `gcc`
+- `python`, `python-pip`, `python-virtualenv`, `uv`, `gcc`
 - Perfect for: Python projects, compiled extensions, virtual environment workflows
 
 **Topaz** (JavaScript Tooling):
